@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2017 Citrus-CAF Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +15,7 @@
 # limitations under the License.
 #
 
-BOARD_VENDOR := oppo
+ifeq ($(BOARD_VENDOR),oneplus)
 
 # CM Hardware
 BOARD_USES_CYANOGEN_HARDWARE := true
@@ -27,3 +28,4 @@ TARGET_POWERHAL_VARIANT := qcom
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_oppo
 TARGET_RELEASETOOLS_EXTENSIONS := device/oppo/common
+endif

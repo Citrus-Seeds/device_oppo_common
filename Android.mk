@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2017 Citrua-CAF Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,7 +17,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter oppo oneplus,$(BOARD_VENDOR)),)
+ifeq ($(TARGET_USE_DEVICE_UTILS),true)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

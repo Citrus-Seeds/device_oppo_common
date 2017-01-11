@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2017 Citrus-CAF Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,6 +28,8 @@ PRODUCT_SYSTEM_SERVER_JARS += com.cyanogenmod.keyhandler
 # never dexopt the keyhandler
 $(call add-product-dex-preopt-module-config,com.cyanogenmod.keyhandler,disable)
 
+ifeq ($(BOARD_VENDOR),oneplus)
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_oppo
+endif
